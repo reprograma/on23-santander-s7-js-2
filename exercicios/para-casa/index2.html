@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script2.js"></script>
+    <title> Mini loja de eletrodomesticos</title>
+</head>
+<body>
+
+  <h1>Filtro de Produtos</h1>
+  <form>
+    <label for="categoria">Categoria:</label>
+    <select id="categoria">
+      <option value="">Todas</option>
+      <option value="informatica">Informática</option>
+      <option value="eletrodomesticos">Eletrodomésticos</option>
+      <option value="audiovideo">Áudio/Vídeo</option>
+    </select>
+
+    <br><br>
+
+    <label for="preco">Preço:</label>
+    <select id="preco">
+      <option value="">Todos</option>
+      <option value="ate100">Até R$ 100</option>
+      <option value="de101a500">De R$ 101 a R$ 500</option>
+      <option value="acima500">Acima de R$ 500</option>
+    </select>
+
+    <br><br>
+
+    <button type="button" onclick="filtrar()">Buscar</button>
+  </form>
+
+  <br><br>
+
+  <div id="resultado"></div>
+    
+</body>
+</html>
