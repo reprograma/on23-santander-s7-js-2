@@ -62,22 +62,27 @@ let filmes = [
     classificacaoEtaria: 18
   },
 ]
----
-
-Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
-
-- [ ] Fiz o fork do repositório.
-- [ ] Clonei o fork na minha máquina (`git clone url-do-meu-fork`).
-- [ ] Resolvi o exercício.
-- [ ] Adicionei as mudanças. (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
-- [ ] Commitei a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
-- [ ] Pushei os commits na minha branch (`git push origin nome-da-branch`)
-- [ ] Criei um Pull Request seguindo as orientaçoes que estao nesse [documento](https://github.com/mflilian/repo-example/blob/main/exercicios/para-casa/instrucoes-pull-request.md).
 
 
 
-pseudo código:
+// pseudo código:
 
-primeiro - idadade é uma condição, então criar um prompt solicitando a idade
+// Primeiro - Idadade é uma condição, então criar um prompt solicitando a idade para possam ser visualizados os filmes.
+// Armazenar esse dado em uma variável.
 
-para acessar a idade, está dentro de um objeto, então é filmes.classificacaoEtaria[]
+// Segundo - Com a idade armazenada, criar a condição determinante no for -> Se idade >= 18, serão exibidos todos os filmes. 
+// Se idade >=  16, exibir x filmes. Se idade >= 14, exibir y filmes. Se idade >= 12 exibir z filmes. Se idade < 12, exibir f filmes.
+
+// Terceiro: Após a condição, acessar a lista de filmes[] e nela, verifica se dentro do objeto() a propriedade "classificacaoEtaria" está 
+// dentro das condições anteriores, e somente após essa verificação exibir a lista de filmes. Essa verificação, será realizada dentro do for,
+// pois através dele, teria como percorer a propriedade e a partir dela exibir a lista. Esse for, pode estar dentro de uma função.
+
+
+const mostrarFilmeFaixa = function () {
+    let idade = Number(prompt("Qual tua idade, boy?"));
+    for (let filme of filmes) {
+        if(idade >= filme.classificacaoEtaria) {
+            console.log(filme.nome)
+        }
+    }
+}
