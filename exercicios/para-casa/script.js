@@ -79,7 +79,7 @@ let produtos = [
       });
   
     if (produtoEncontrado) {
-      resultado.innerHTML = `Nome: ${produtoEncontrado.nome} | Categoria ${produtoEncontrado.categoria} | Preço: ${produtoEncontrado.preco}`;
+      resultado.innerHTML = `Nome: ${produtoEncontrado.nome} | Categoria: ${produtoEncontrado.categoria} | Preço: R$ ${produtoEncontrado.preco}`;
     } else {
       resultado.innerHTML = "Produto não encontrado";
     }
