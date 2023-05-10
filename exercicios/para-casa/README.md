@@ -32,7 +32,7 @@ let produtos = [
     nome: "Sanduicheira",
     categoria: "eletrodomésticos",
     preco: 130
-  },
+  },   
   {
     nome: "Microondas 20L",
     categoria: "eletrodomésticos",
