@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pesquisa de Produtos</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: red;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .form-group label {
+      margin-bottom: 5px;
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      background-color: #fff;
+      padding: 0 5px;
+    }
+    
+    .form-group input {
+      padding: 5px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .form-group button {
+      padding: 5px 10px;
+      margin-top: 10px;
+      width: fit-content;
+      background-color: #1a0253;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-group button:hover {
+      background-color: #6045a0;
+    }
+
+    #result {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: white;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pesquisa de Produtos</h1>
+
+  <label for="productInput">Digite o nome do produto:</label>
+  <input type="text" id="productInput">
+  <button onclick="pesquisarProduto()">Pesquisar</button>
+
+  <div id="result">
+    <p><strong>Nome:</strong> <span id="nomeProduto"></span></p>
+    <p><strong>Categoria:</strong> <span id="categoriaProduto"></span></p>
+    <p><strong>Preço:</strong> R$<span id="precoProduto"></span></p>
+  </div>
+<div id="feedback"></div>
+  <script src="excasa3.js"></script>
+</body>
+</html>
