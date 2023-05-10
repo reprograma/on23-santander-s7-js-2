@@ -67,31 +67,18 @@ let produtos = [
   }
 ]
 
-const filterElement = document.querySelector('header input');
-const cards = document.querySelectorAll('.cards li');
 
-filterElement.addEventListener('input', filtrarCards)
+let qualProdutoDeseja = prompt("Digite o produto que está procurando")
 
-function filtrarCards() {
+function buscarproduto() {
+  let pesquisarProduto = document.querySelector("h3");
+  for (produtos of produtos) {
+    if (produtos.nome == qualProdutoDeseja) {
 
-  if (filterElement.value != '') {
-    for (let card of cards) {
-      let title = card.querySelector('h2')
-      title = title.textContent.toLocaleUpperCase()
-      let filterText = filterElement.value.toLocaleUpperCase()
+      pesquisarProduto.innerHTML = (' O produto ' + ' ' + produtos.nome + ' ' + 'categoria de ' + produtos.categoria + ' custa ' + ' ' + produtos.preco + ' ' + 'reais');
 
-      if (!title.includes(filterText)) {
-        card.style.display = 'none'
-      } else {
-
-        card.style.display = 'block'
-      }
-    }
-  } else {
-    for (let card of cards) {
-      card.style.display = 'block'
     }
   }
 }
 
-
+buscarproduto();
