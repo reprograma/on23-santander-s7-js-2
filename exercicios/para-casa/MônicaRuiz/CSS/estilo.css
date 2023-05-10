@@ -1,0 +1,9 @@
+.card{
+
+    background-color: aquamarine;
+    gap:20 px ;
+    font-size: medium;
+    max-width: 120px;
+    max-height: 100px;
+    row-gap: 60px;
+}
