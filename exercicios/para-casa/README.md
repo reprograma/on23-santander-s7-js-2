@@ -76,6 +76,8 @@ let produtos = [
 ]
 ---
 
+
+
 Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
 
 - [ ] Fiz o fork do repositório.
