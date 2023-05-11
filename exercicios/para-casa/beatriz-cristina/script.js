@@ -86,18 +86,50 @@ let produtos = [
   }
 ]
 
-let descricao = document.querySelector ('p')
-let pesquisa = prompt("Por favor, digite o produto a ser pesquisado.")
+  function apresentarProduto(){
 
-function buscarProduto(busca){
-  for(produto of produtos){
-    if (busca == produto.nome){
-      descricao.innerHTML = produto.nome + produto.categoria + produto.preco
+    let descricaoProduto = document.getElementById('descricao')
+    let pesquisaProduto = prompt("Por favor, digite o produto a ser pesquisado.") 
+  
+    let elementoEncontrado = produtos.find(produto => produto.nome == pesquisaProduto)
+    
+    if(elementoEncontrado == undefined){
+      descricaoProduto.innerHTML = "Produto não encontrado."
+    } else {
+      descricaoProduto.innerHTML = `Produto: ${elementoEncontrado.nome}, Categoria: ${elementoEncontrado.categoria},  Preço: ${elementoEncontrado.preco}`;
     }
-  }
+    
 }
 
-buscarProduto(pesquisa)
+apresentarProduto()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let descricao = document.querySelector ('p')
+// let pesquisa = prompt("Por favor, digite o produto a ser pesquisado.")
+
+// function buscarProduto(busca){
+//   for(produto of produtos){
+//     if (busca == produto.nome){
+//       descricao.innerHTML = produto.nome + produto.categoria + produto.preco
+//     }
+//   }
+// }
+
+// buscarProduto(pesquisa)
 
 // function buscarProduto(){
 
