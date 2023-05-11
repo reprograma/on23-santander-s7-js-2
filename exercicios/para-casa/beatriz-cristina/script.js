@@ -12,7 +12,7 @@
 // 5- SE encontrar o produto, colocar na tela sem ser pelo alert
 
 //Comandos:
-// 1- p com id
+// 1- p
 // 2- prompt
 // 3- let
 // 4- Function 
@@ -86,13 +86,26 @@ let produtos = [
   }
 ]
 
-function buscarProduto(){
+let descricao = document.querySelector ('p')
+let pesquisa = prompt("Por favor, digite o produto a ser pesquisado.")
 
-    let descricao = document.getElementsByTagName('p');
-    let pesquisa = prompt("Por favor, digite o produto a ser pesquisado.")
-
-    let produto = protudos.map(item)
-    return ${item.nome}, ${item.categoria}, ${item.preco}; 
+function buscarProduto(busca){
+  for(produto of produtos){
+    if (busca == produto.nome){
+      descricao.innerHTML = produto.nome + produto.categoria + produto.preco
+    }
+  }
 }
 
-buscarProduto()
+buscarProduto(pesquisa)
+
+// function buscarProduto(){
+
+//     let descricao = document.getElementsByTagName('p');
+//     let pesquisa = prompt("Por favor, digite o produto a ser pesquisado.")
+
+//     let produto = protudos.map(item)
+//     return ${item.nome}, ${item.categoria}, ${item.preco}; 
+// }
+
+// buscarProduto()
