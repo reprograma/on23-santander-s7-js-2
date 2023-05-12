@@ -86,37 +86,29 @@ let produtos = [
   }
 ]
 
-  function apresentarProduto(){
+  let pesquisa = prompt("Qual é o nome do produto?")
+  let descricao = document.getElementById("descricao")
 
-    let descricaoProduto = document.getElementById('descricao')
-    let pesquisaProduto = prompt("Por favor, digite o produto a ser pesquisado.") 
+  let produtoEncontrado = produtos.filter((produto) =>{return pesquisa == produto.nome}) 
+  console.log(produtoEncontrado)
+  descricao.innerHTML = `Produto: ${produtoEncontrado[0].nome}, Categoria: ${produtoEncontrado[0].categoria}, Preço: ${produtoEncontrado[0].preco}`
+
+//   function apresentarProduto(){
+
+//     let descricaoProduto = document.getElementById('descricao')
+//     let pesquisaProduto = prompt("Por favor, digite o produto a ser pesquisado.") 
   
-    let elementoEncontrado = produtos.find(produto => produto.nome == pesquisaProduto)
+//     let elementoEncontrado = produtos.find(produto => produto.nome == pesquisaProduto)
     
-    if(elementoEncontrado == undefined){
-      descricaoProduto.innerHTML = "Produto não encontrado."
-    } else {
-      descricaoProduto.innerHTML = `Produto: ${elementoEncontrado.nome}, Categoria: ${elementoEncontrado.categoria},  Preço: ${elementoEncontrado.preco}`;
-    }
+//     if(elementoEncontrado == undefined){
+//       descricaoProduto.innerHTML = "Produto não encontrado."
+//     } else {
+//       descricaoProduto.innerHTML = `Produto: ${elementoEncontrado.nome}, Categoria: ${elementoEncontrado.categoria},  Preço: ${elementoEncontrado.preco}`;
+//     }
     
-}
+// }
 
-apresentarProduto()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// apresentarProduto()
 
 // let descricao = document.querySelector ('p')
 // let pesquisa = prompt("Por favor, digite o produto a ser pesquisado.")
