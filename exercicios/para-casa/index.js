@@ -66,21 +66,41 @@ let produtos = [
   },
 ];
 
-function buscarProduto() {
-  let resultado = document.getElementById("paragrafo");
 
-  let nomeProduto = prompt("Qual produto você procura?");
-  let produtoFiltrado = produtos.find(
-    (produto) => produto.nome === nomeProduto
-  );
+// function buscarProduto() {
+//   let resultado = document.getElementById("paragrafo");
 
-  if (produtoFiltrado) {
-    resultado.innerHTML = (
-      `Nome: ${produtoFiltrado.nome} | Categoria: ${produtoFiltrado.categoria} | Preço: R$ ${produtoFiltrado.preco}`
-    );
-  } else {
-    resultado.innerHTML = ("Produto não encontrado");
+//   let nomeProduto = prompt("Qual produto você procura?");
+//   let produtoFiltrado = produtos.find(
+//     (produto) => produto.nome === nomeProduto
+//   );
+
+//   if (produtoFiltrado) {
+//     resultado.innerHTML = (
+//       `Nome: ${produtoFiltrado.nome} | Categoria: ${produtoFiltrado.categoria} | Preço: R$ ${produtoFiltrado.preco}`
+//     );
+//   } else {
+//     resultado.innerHTML = ("Produto não encontrado");
+//   }
+// }
+
+// buscarProduto();
+
+const botao = document.querySelector('button');
+const input = document.querySelector('input');
+const nomeProduto = document.getElementById("nome-produto");
+const precoProduto = document.querySelector("#preco-produto");
+const categoriaProduto = document.getElementById("categoria-produto");
+
+function pesquisarProdutos() {
+  let pesquisa = input.value
+  for (let produto of produtos) {
+    if (produto.nome === pesquisa) {
+      nomeProduto.innerHTML = produto.nome;
+      precoProduto.innerHTML = produto.preco; 
+      categoriaProduto.innerHTML = produto.categoria;
+    }
   }
 }
 
-buscarProduto();
+botao.addEventListener('click', pesquisarProdutos)
