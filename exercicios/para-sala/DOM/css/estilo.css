@@ -87,3 +87,7 @@ h2 {
 .grande {
     font-size: 50pt;
 }
+
+.ativo {
+    color: red;
+}
