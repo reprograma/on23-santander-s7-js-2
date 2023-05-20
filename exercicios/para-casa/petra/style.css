@@ -24,7 +24,7 @@ h1:hover {
 
 #p1, #p2, #p3 {
     color: #cc97c3;
-    background-color: rgb(243, 223, 198);
+    background-color: rgb(241, 223, 198);
     flex-direction: column;
     border-radius: 0.5px;
     border-width: 50%;
